@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="33231cbd-bf72-44da-9c21-96fe335410bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/car_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/car_form.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +33,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "test",
     "last_opened_file_path": "/home/drummer/PhpstormProjects/car_project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -67,7 +69,7 @@
       <workItem from="1746047342928" duration="6695000" />
       <workItem from="1746223902059" duration="8996000" />
       <workItem from="1746306102550" duration="9511000" />
-      <workItem from="1747168878395" duration="3847000" />
+      <workItem from="1747168878395" duration="9684000" />
     </task>
     <servers />
   </component>
