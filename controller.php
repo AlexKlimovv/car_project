@@ -6,9 +6,6 @@ require_once 'db.php';
 require_once 'src/Car.php';
 require_once 'src/CarStorage.php';
 
-$pdo = new PDO("mysql:host=172.19.0.3;port=3306;dbname=car_project", "root", "root");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 $storage = new CarStorage($pdo);
 
 $editCar = null;
