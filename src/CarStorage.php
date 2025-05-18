@@ -8,8 +8,8 @@ class CarStorage
     }
 
     public function add(Car $car): bool {
-        $sql = "INSERT INTO cars (brand, model, vin, regNum, yearOfManufacture) 
-        VALUES (:brand, :model, :vin, :regNum, :year)";
+        $sql = "INSERT INTO cars (brand, model, vin, regNum, yearOfManufacture, user_id) 
+        VALUES (:brand, :model, :vin, :regNum, :year, :user_id)";
 
         $stmt = $this->pdo->prepare($sql);
 
@@ -19,18 +19,19 @@ class CarStorage
             'regNum' => $car->regNum,
             'vin' => $car->vin,
             'year' => $car->yearOfManufacture,
+            'user_id' => $car->userId
         ]);
 
     }
 
-    public function getAll(): array
+    public function getAllByUser(int $userId): array
     {
-        $sql = "SELECT * FROM cars";
-        $stmt = $this->pdo->query(($sql));
+        $sql = "SELECT * FROM cars WHERE user_id = :user_id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute(['user_id' => $userId]);
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         $cars = [];
-
         foreach ($rows as $row) {
             $cars[] = new Car(
                 (int)$row['id'],
@@ -39,6 +40,7 @@ class CarStorage
                 $row['regNum'],
                 $row['vin'],
                 $row['yearOfManufacture'],
+                (int)$row['user_id']
             );
         }
         return $cars;
@@ -59,6 +61,7 @@ class CarStorage
                 $row['regNum'],
                 $row['vin'],
                 $row['yearOfManufacture'],
+                (int)$row['user_id']
             );
         }
         return null;
@@ -83,7 +86,7 @@ class CarStorage
             ':model' => $car->model,
             ':vin' => $car->vin,
             ':regNum' => $car->regNum,
-            ':year' => $car->yearOfManufacture,
+            ':year' => $car->yearOfManufacture
         ]);
     }
 }

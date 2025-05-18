@@ -6,9 +6,6 @@ require_once 'db.php';
 require_once 'src/Car.php';
 require_once 'src/CarStorage.php';
 
-$pdo = new PDO("mysql:host=172.19.0.3;port=3306;dbname=car_project", "root", "root");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 $storage = new CarStorage($pdo);
 
 $editCar = null;
@@ -46,10 +43,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (empty($errors)) {
             if (isset($_POST['editIndex']) && $_POST['editIndex'] !== '') {
                 $editIndex = (int)$_POST['editIndex'];
-                $car = new Car($editIndex, $brand, $model, $regNum, $vin, (int)$yearOfManufacture);
+                $car = new Car($editIndex, $brand, $model, $regNum, $vin, (int)$yearOfManufacture, $_SESSION['user_id']);
                 $storage->update($editIndex, $car);
             } else {
-                $car = new Car(null, $brand, $model, $regNum, $vin, (int)$yearOfManufacture);
+                $car = new Car(null, $brand, $model, $regNum, $vin, (int)$yearOfManufacture, $_SESSION['user_id']);
                 $storage->add($car);
             }
 
@@ -57,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             exit;
         } else {
             // если есть ошибки — сохраняем авто для формы
-            $editCar = new Car(null, $brand, $model, $regNum, $vin, (int)$yearOfManufacture);
+            $editCar = new Car(null, $brand, $model, $regNum, $vin, (int)$yearOfManufacture, $_SESSION['user_id']);
         }
     }
 }
