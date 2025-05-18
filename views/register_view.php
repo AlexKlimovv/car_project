@@ -6,6 +6,6 @@
     <button type="submit">Зарегистрироваться</button>
 </form>
 
-<?php foreach ($errors as $e): ?>
-    <p style="color: red"><?= htmlspecialchars($e)?></p>
+<?php foreach ($errors as $error): ?>
+    <p style="color: red"><?= htmlspecialchars($error)?></p>
 <?php endforeach; ?>

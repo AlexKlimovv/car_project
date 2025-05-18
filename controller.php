@@ -43,10 +43,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (empty($errors)) {
             if (isset($_POST['editIndex']) && $_POST['editIndex'] !== '') {
                 $editIndex = (int)$_POST['editIndex'];
-                $car = new Car($editIndex, $brand, $model, $regNum, $vin, (int)$yearOfManufacture);
+                $car = new Car($editIndex, $brand, $model, $regNum, $vin, (int)$yearOfManufacture, $_SESSION['user_id']);
                 $storage->update($editIndex, $car);
             } else {
-                $car = new Car(null, $brand, $model, $regNum, $vin, (int)$yearOfManufacture);
+                $car = new Car(null, $brand, $model, $regNum, $vin, (int)$yearOfManufacture, $_SESSION['user_id']);
                 $storage->add($car);
             }
 
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             exit;
         } else {
             // если есть ошибки — сохраняем авто для формы
-            $editCar = new Car(null, $brand, $model, $regNum, $vin, (int)$yearOfManufacture);
+            $editCar = new Car(null, $brand, $model, $regNum, $vin, (int)$yearOfManufacture, $_SESSION['user_id']);
         }
     }
 }

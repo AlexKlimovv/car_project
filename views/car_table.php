@@ -1,4 +1,4 @@
-<?php if (!empty($storage->getAll())) : ?>
+<?php if (!empty($cars)) : ?>
     <h2>Ваши машины:</h2>
     <table>
         <tr>
@@ -9,7 +9,7 @@
             <th>Год:</th>
             <th>Действие</th>
         </tr>
-        <?php foreach ($storage->getAll() as $index => $car): ?>
+        <?php foreach ($cars as $car): ?>
             <tr>
                 <td><?= htmlspecialchars($car->brand) ?></td>
                 <td><?= htmlspecialchars($car->model) ?></td>

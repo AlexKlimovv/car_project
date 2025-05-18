@@ -1,5 +1,5 @@
 <?php
-$host = '172.19.0.3';
+$host = '172.19.0.2';
 $db = 'car_project';
 $user = 'admin';
 $pass = 'admin';

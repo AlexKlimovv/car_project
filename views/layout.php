@@ -1,4 +1,3 @@
-<!-- views/layout.php -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
