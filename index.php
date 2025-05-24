@@ -15,7 +15,7 @@ $userStorage = new UserStorage($pdo);
 $carStorage = new CarStorage($pdo);
 $cars = $carStorage->getAllByUser($_SESSION['user_id']);
 
-$errors = [];
+$errors = $errors ?? [];
 $editCar = $editCar ?? null;
 $editIndex = $editIndex ?? null;
 

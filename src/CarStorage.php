@@ -89,4 +89,10 @@ class CarStorage
             ':year' => $car->yearOfManufacture
         ]);
     }
+
+    public function belongsToUser(int $carId, int $userId): bool {
+        $stmt = $this->pdo->prepare("SELECT COUNT(*) FROM cars WHERE id = :id AND user_id = :user_id");
+        $stmt->execute(['id' => $carId, 'user_id' => $userId]);
+        return $stmt->fetchColumn() > 0;
+    }
 }
