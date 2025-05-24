@@ -7,14 +7,9 @@
     <list default="true" id="33231cbd-bf72-44da-9c21-96fe335410bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Car.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Car.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CarStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarStorage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/car_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/car_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/register_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/register_view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +74,26 @@
       <workItem from="1746306102550" duration="9511000" />
       <workItem from="1747168878395" duration="10478000" />
       <workItem from="1747430110098" duration="11383000" />
-      <workItem from="1747514553915" duration="10093000" />
+      <workItem from="1747514553915" duration="12590000" />
+      <workItem from="1747604295427" duration="3390000" />
+      <workItem from="1747950540432" duration="10354000" />
+      <workItem from="1748032842690" duration="10411000" />
+      <workItem from="1748122185688" duration="5921000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $regNum = trim($_POST["regNum"]);
         $yearOfManufacture = $_POST["yearOfManufacture"];
 
-        // валидация
+        // валидация формы авто
         if ($brand === '') $errors[] = "Марка обязательна";
         if ($model === '') $errors[] = "Модель обязательна";
         if ($vin === '' || strlen($vin) !== 17) $errors[] = "VIN должен состоять из 17 символов";
