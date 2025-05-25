@@ -1,4 +1,4 @@
-<form method="post">
+<form method="post" action="/PhpstormProjects/car_project/car_controller.php">
     <?php if (!empty($errors)): ?>
         <ul style="color: red;">
             <?php foreach ($errors as $error): ?>

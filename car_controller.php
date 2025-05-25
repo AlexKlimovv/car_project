@@ -2,6 +2,9 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 require_once 'db.php';
 require_once 'src/Car.php';
 require_once 'src/CarStorage.php';
@@ -50,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $storage->add($car);
             }
 
-            header('Location: index.php');
+            header('Location: garage.php');
             exit;
         } else {
             // если есть ошибки — сохраняем авто для формы
