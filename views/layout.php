@@ -13,7 +13,8 @@
 <body>
 <div style="display: flex; justify-content: space-between; align-items: center; background-color: #f5f5f4; padding: 10px; margin-bottom: 20px">
     <span>Пользователь:<strong><?= htmlspecialchars($_SESSION['username'])?></strong></span>
-    <a href="/PhpstormProjects/car_project/index.php">Гараж</a>
+    <a href="/PhpstormProjects/car_project/add_car.php">Добавить авто</a>
+    <a href="/PhpstormProjects/car_project/garage.php">Гараж</a>
     <a href="/PhpstormProjects/car_project/repairs.php">Ремонты</a>
     <a href="#">Заправки</a>
 

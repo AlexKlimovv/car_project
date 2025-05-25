@@ -1,4 +1,4 @@
-<h2>Ремонты</h2>
+<h2>Ваши ремонты:</h2>
 <form method="get" action="/PhpstormProjects/car_project/repairs.php">
     <label>Выберите авто:
         <select name="car_id" onchange="this.form.submit()">
