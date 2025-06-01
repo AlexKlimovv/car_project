@@ -21,7 +21,6 @@ class CarStorage
             'year' => $car->yearOfManufacture,
             'user_id' => $car->userId
         ]);
-
     }
 
     public function getAllByUser(int $userId): array
@@ -94,5 +93,25 @@ class CarStorage
         $stmt = $this->pdo->prepare("SELECT COUNT(*) FROM cars WHERE id = :id AND user_id = :user_id");
         $stmt->execute(['id' => $carId, 'user_id' => $userId]);
         return $stmt->fetchColumn() > 0;
+    }
+
+    public function getById(int $id): ?Car
+    {
+        $stmt = $this->pdo->prepare("SELECT * FROM cars WHERE id = ?");
+        $stmt->execute([$id]);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($row) {
+            return new Car (
+                $row['id'],
+                $row['brand'],
+                $row['model'],
+                $row['regNum'],
+                $row['vin'],
+                $row['yearOfManufacture'],
+                $row['user_id']
+            );
+        }
+        return null;
     }
 }

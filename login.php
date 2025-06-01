@@ -7,6 +7,7 @@ require_once 'login_controller.php'
     <input name="password" type="password" placeholder="Пароль" required>
     <button type="submit">Войти</button>
 </form>
+    <p>Нет аккаунта? <a href="register.php">Зарегистрироваться</a></p>
 
 <?php if (!empty($errors)): ?>
     <ul style="color: red">

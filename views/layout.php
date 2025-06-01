@@ -16,7 +16,7 @@
     <a href="/PhpstormProjects/car_project/add_car.php">Добавить авто</a>
     <a href="/PhpstormProjects/car_project/garage.php">Гараж</a>
     <a href="/PhpstormProjects/car_project/repairs.php">Ремонты</a>
-    <a href="#">Заправки</a>
+    <a href="/PhpstormProjects/car_project/refuels.php">Заправки</a>
 
     <form action="/PhpstormProjects/car_project/logout.php" method="post">
     <button type="submit">Выйти</button>
