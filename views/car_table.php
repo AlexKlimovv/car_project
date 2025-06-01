@@ -1,6 +1,6 @@
 <?php if (!empty($cars)) : ?>
     <h2>Ваши машины:</h2>
-    <table>
+    <table border="1" cellpadding="5">
         <tr>
             <th>Марка:</th>
             <th>Модель:</th>
